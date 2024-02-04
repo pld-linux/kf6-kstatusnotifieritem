@@ -24,13 +24,13 @@ BuildRequires:	Qt6Quick-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
 BuildRequires:	catdoc
 BuildRequires:	cmake >= 3.16
-BuildRequires:	kf5-extra-cmake-modules >= %{version}
+BuildRequires:	kf6-extra-cmake-modules >= %{version}
 BuildRequires:	ninja
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-Requires:	kf5-dirs
+Requires:	kf6-dirs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
