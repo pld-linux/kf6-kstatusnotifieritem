@@ -5,17 +5,17 @@
 # TODO:
 # - runtime Requires if any
 
-%define		kdeframever	6.14
+%define		kdeframever	6.15
 %define		qtver		5.15.2
 %define		kfname		kstatusnotifieritem
 Summary:	Status notifier item
 Name:		kf6-%{kfname}
-Version:	6.14.0
+Version:	6.15.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	80f2ea5c5b6901c3415a64d5ee0429b2
+# Source0-md5:	c46a13839a3559c600c0361ef2933ccd
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -57,6 +57,7 @@ Pliki nagłówkowe dla programistów używających %{kfname}.
 %cmake -B build \
 	-G Ninja \
 	%{!?with_tests:-DBUILD_TESTING=OFF} \
+	-DBUILD_PYTHON_BINDINGS=OFF \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
 
 %ninja_build -C build
