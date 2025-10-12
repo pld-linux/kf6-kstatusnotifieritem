@@ -5,17 +5,17 @@
 # TODO:
 # - runtime Requires if any
 
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		kstatusnotifieritem
 Summary:	Status notifier item
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	304664bffb136473875ff00dd7920117
+# Source0-md5:	04571f86cb149e02062dfdb6fc7c3ccf
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -82,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kfname}6.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKF6StatusNotifierItem.so.*.*
+%{_libdir}/libKF6StatusNotifierItem.so.*.*
 %ghost %{_libdir}/libKF6StatusNotifierItem.so.6
 %{_datadir}/dbus-1/interfaces/kf6_org.kde.StatusNotifierItem.xml
 %{_datadir}/dbus-1/interfaces/kf6_org.kde.StatusNotifierWatcher.xml
