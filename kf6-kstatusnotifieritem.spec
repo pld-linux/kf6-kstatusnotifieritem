@@ -37,7 +37,12 @@ Requires:	kf6-kwindowsystem >= %{kdeframever}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Kstatus notifier item.
+KStatusNotifierItem is a class to create status notifier items that
+can be displayed in the system tray.
+
+%description -l pl.UTF-8
+KStatusNotifierItem jest klasą do tworzenia elementów powiadomień,
+które mogą być wyświetlane na tacce systemowej.
 
 %package devel
 Summary:	Header files for %{kfname} development
